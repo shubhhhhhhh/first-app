@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <!-- apply load static code line before setting css in this html file -->
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static '/css/style.css' %}">
+</head>
+
+<body>
+    {% include 'layout/header.html' %}
+    <h1>products home page</h1>
+    <img src="{%static '/images/new.webp' %}" width="800" height="300">
+    <div>
+        {% for d in data %}
+        <h1>{{d}}</h1>
+        {% endfor %}
+    </div>
+    {% include 'layout/footer.html' %}
+    <div id="a" style="padding: 10px 0px;
+    background-color: red;
+    color:black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;">
+        hey</div>
+    <div style="text-align: center;">
+        <button id="btn" style="padding: 10px;
+            background-color: orange;color: white;
+            font-size: larger;
+            font-family: 'Courier New', Courier, monospace;
+            
+            ">
+            click karo na</button>
+    </div>
+    <script src="{%static '/js/kk.js' %}"></script>
+</body>
+
+</html>
