@@ -18,7 +18,7 @@
         <h1>{{d}}</h1>
         {% endfor %}
     </div>
-    {% include 'layout/footer.html' %}
+    
     <div id="a" style="padding: 10px 0px;
     background-color: red;
     color:black;
@@ -35,7 +35,13 @@
             ">
             click karo na</button>
     </div>
-    <script src="{%static '/js/kk.js' %}"></script>
+    {% include 'layout/footer.html' %}
+    <script src="{%static '/js/kk.js' %}">
+        // console.log("home page")
+    </script>
+    <script>
+        console.log("home page")
+    </script>
 </body>
 
 </html>

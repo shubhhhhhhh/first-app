@@ -6,3 +6,6 @@ def first(request):
     # return render(request,'index.html')  //simply render without any modification in html file for render
     # for modification in the html file for render
     return render(request,'index.html',{'data':list})  
+
+def Login_Page(request):
+    return render(request,'Login.html')

@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>signup page</title>
 </head>
 
 <body>
+    {% include 'layout/header.html' %}
     <h1 style="background-color: orange;
     color: whitesmoke;
     font-size: larger;
@@ -16,15 +17,17 @@
         signup page
     </h1>
     <form action="signup/" method="post">
-        {% csrf_token %}
+        <!-- {% csrf_token %} -->
         <input type="text" name="name" placeholder="name" />
         <input type="text" name="email" placeholder="email" />
         <input type="password" name="password" placeholder="password" />
         <input type="submit" value="submit" />
     </form>
 
-    <a href="employeelist/">All Employee</a>
+    <!-- <a href="employeelist/">All Employee</a> -->
+    <a href="/success/">success page</a>
 
+    {% include 'layout/footer.html' %}
 </body>
 
 </html>

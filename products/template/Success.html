@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FirstApp</title>
 </head>
 
 <body>
+    {% include 'layout/header.html' %}
+
     <h1 style="background-color: green;
     color: aliceblue;
     font: 100;
@@ -16,6 +18,21 @@
     ">
         signup successful
     </h1>
+
+    <a href="/home/" id="home">Home</a>
+    <!-- <a href="http://127.0.0.1:8000/home"  target="_blank">Home</a> -->
+
+    {% include 'layout/footer.html' %}
+    <script>
+        (()=>{
+            const home_element = document.getElementById("home")
+            console.log("success page")
+            setTimeout(()=>{
+                
+                home_element.click()
+            },1000)
+        })()
+    </script>
 </body>
 
 </html>

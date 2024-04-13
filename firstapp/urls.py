@@ -22,12 +22,14 @@ from account_system import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     # setting path for different apps by defining their urls here
-  #  path('products/',views.first),
+    #  path('products/',views.first),
     path('signup/',views.account_signup),
     path('success/',views.success),
+    path('home/',views.home),
     path('',views.new_account),
     path('employee/',views.getEmployee),
     path('login/',views.login),
+    path('loginpage/',views.Login_Page),
     path('api/',include('api.urls')),
     path('api-auth/',include('rest_framework.urls'))
 ]
